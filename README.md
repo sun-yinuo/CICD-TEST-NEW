@@ -68,7 +68,7 @@ mvn spring-boot:run
 
 或者运行:
 ```bash
-java -jar test/target/test-1.0.0.jar
+java -jar test/target/test.jar
 ```
 
 ### 4. 启动 gateway 服务
@@ -80,7 +80,7 @@ mvn spring-boot:run
 
 或者运行:
 ```bash
-java -jar gateway/target/gateway-1.0.0.jar
+java -jar gateway/target/gateway.jar
 ```
 
 ## 测试
@@ -138,7 +138,7 @@ spring:
 
 ## 开发建议
 
-- 修改代码后使用 `mvn clean install` 重新编译
+- 修改代码后使用 `mvn clean package -DskipTests` 或 `mvn clean install -DskipTests` 重新编译
 - 查看日志了解服务状态
 - 在 Nacos 控制台监控服务注册情况
 
